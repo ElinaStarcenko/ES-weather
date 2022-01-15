@@ -92,3 +92,7 @@ a {
   font-size: 18px;
   padding-right: 15px;
 }
+#coded-by {
+  display: block;
+  text-align: center;
+}
