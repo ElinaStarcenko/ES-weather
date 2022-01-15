@@ -130,7 +130,9 @@ function makeLatvian(event) {
   document.querySelector(".humidity").innerHTML = `Mitrums:`;
   document.querySelector(".wind").innerHTML = `Vējš:`;
 }
-
+function makeEnglish(event) {
+  location.reload();
+}
 let currentLocation = document.querySelector("#location-button");
 currentLocation.addEventListener("click", sendLocation);
 
@@ -141,3 +143,6 @@ search("riga");
 
 let inLatvian = document.querySelector("#in-latvian-button");
 inLatvian.addEventListener("click", makeLatvian);
+
+let inEnglish = document.querySelector("#in-english-button");
+inEnglish.addEventListener("click", makeEnglish);
