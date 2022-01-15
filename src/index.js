@@ -101,6 +101,35 @@ function handleSubmit(event) {
   let city = document.querySelector("#users-input").value;
   search(city);
 }
+function makeLatvian(event) {
+  event.preventDefault();
+  let now = new Date();
+  let days = [
+    `Svētdiena`,
+    `Pirmdiena`,
+    `Otrdiena`,
+    `Trešdiena`,
+    `Ceturtdiena`,
+    `Piektdiena`,
+    `Sestdiena`,
+  ];
+  let day = days[now.getDay()];
+  let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let currentDate = `${day} ${hours}:${minutes}`;
+  document.querySelector("#current-date").innerHTML = currentDate;
+  document.querySelector(".sunrise").innerHTML = `Saullēkts:`;
+  document.querySelector(".sunset").innerHTML = `Saulriets:`;
+  document.querySelector(".feels").innerHTML = `Jūtās:`;
+  document.querySelector(".humidity").innerHTML = `Mitrums:`;
+  document.querySelector(".wind").innerHTML = `Vējš:`;
+}
 
 let currentLocation = document.querySelector("#location-button");
 currentLocation.addEventListener("click", sendLocation);
@@ -109,3 +138,6 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("riga");
+
+let inLatvian = document.querySelector("#in-latvian-button");
+inLatvian.addEventListener("click", makeLatvian);
