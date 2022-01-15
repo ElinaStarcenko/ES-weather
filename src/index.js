@@ -133,6 +133,35 @@ function makeLatvian(event) {
 function makeEnglish(event) {
   location.reload();
 }
+function makeRussian(event) {
+  event.preventDefault();
+  let now = new Date();
+  let days = [
+    `Воскресенье`,
+    `Понедельник`,
+    `Вторник`,
+    `Среда`,
+    `Четверг`,
+    `Пятница`,
+    `Суббота`,
+  ];
+  let day = days[now.getDay()];
+  let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let currentDate = `${day} ${hours}:${minutes}`;
+  document.querySelector("#current-date").innerHTML = currentDate;
+  document.querySelector(".sunrise").innerHTML = `Восход:`;
+  document.querySelector(".sunset").innerHTML = `Закат:`;
+  document.querySelector(".feels").innerHTML = `По ощущениям:`;
+  document.querySelector(".humidity").innerHTML = `Влажность:`;
+  document.querySelector(".wind").innerHTML = `Скорость ветра:`;
+}
 let currentLocation = document.querySelector("#location-button");
 currentLocation.addEventListener("click", sendLocation);
 
@@ -146,3 +175,6 @@ inLatvian.addEventListener("click", makeLatvian);
 
 let inEnglish = document.querySelector("#in-english-button");
 inEnglish.addEventListener("click", makeEnglish);
+
+let inRussian = document.querySelector("#in-russian-button");
+inRussian.addEventListener("click", makeRussian);
