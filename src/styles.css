@@ -1,0 +1,94 @@
+body {
+  background: url(pictures/beach-thunder.jpg);
+  background-size: cover;
+  font-family: "Mali", cursive;
+  font-family: "Source Serif Pro", serif;
+  color: #fff;
+}
+h1 {
+  font-weight: 800;
+  padding: 40px 0 0 0;
+}
+h2 {
+  font-weight: 600;
+  font-size: 20px;
+}
+h3 {
+  font-size: 18px;
+  margin: 0;
+  padding-top: 5px;
+}
+h4 {
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+form {
+  border-radius: 10px;
+  padding: 10px;
+}
+.central-field p {
+  padding-bottom: 15px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.searching-field,
+.central-field,
+.forecast-field {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  max-width: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #fff;
+}
+.searching-field {
+  border-radius: 10px;
+}
+.central-field {
+  border-radius: 50%;
+  max-width: 400px;
+}
+.circle-left {
+  text-align: right;
+}
+.central-field .icon {
+  font-size: 70px;
+}
+.circle-right {
+  text-align: left;
+}
+.forecast-field {
+  padding: 0 20px;
+  border-radius: 10px;
+}
+.forecast {
+  margin: 5px;
+}
+.day {
+  font-size: 18px;
+  font-weight: 700;
+}
+.date {
+  font-size: 14px;
+}
+.forecast-field .icon {
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+}
+.icon-temp {
+  text-align: right;
+  margin-top: 10px;
+}
+.in-words {
+  padding-top: 10px;
+  font-size: 12px;
+}
+#search-location {
+  font-size: 18px;
+  padding-right: 15px;
+}
