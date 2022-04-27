@@ -178,3 +178,5 @@ inEnglish.addEventListener("click", makeEnglish);
 
 let inRussian = document.querySelector("#in-russian-button");
 inRussian.addEventListener("click", makeRussian);
+
+alert("It's a nice day today!");
